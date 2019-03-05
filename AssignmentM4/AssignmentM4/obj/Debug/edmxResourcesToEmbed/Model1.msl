@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AssWPModel1StoreContainer" CdmEntityContainer="AssWPEntities1">
+    <EntitySetMapping Name="Questions">
+      <EntityTypeMapping TypeName="AssWPModel1.Question">
+        <MappingFragment StoreEntitySet="Question">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="question1" ColumnName="question" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,8 @@
+Plz Read this before open the app.
+
+In this app, I separated the users role like admin and normal users. So only admin can create the skincare routine and 
+about skincare. Normal users can ask questions and they can edit or delete their questions. They can't delete others 
+questions.
+
+Admin Email - MyoMyat@gmail.com
+Admin Password - Kk123456@

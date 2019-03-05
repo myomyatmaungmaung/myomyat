@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AssWPModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'AssWP.dbo.Answer' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Answer">
+          <Property Name="UserID" Type="varchar" MaxLength="10" />
+          <Property Name="answer" Type="varchar" MaxLength="500" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'AssWP.dbo.Question' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Question">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="question" />
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="UserID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="question" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="phone" Type="varchar" MaxLength="20" />
+    <Property Name="email" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="AssWPModel1StoreContainer">
+    <EntitySet Name="Question" EntityType="Self.Question" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Question].[UserID] AS [UserID], 
+    [Question].[question] AS [question], 
+    [Question].[phone] AS [phone], 
+    [Question].[email] AS [email]
+    FROM [dbo].[Question] AS [Question]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
